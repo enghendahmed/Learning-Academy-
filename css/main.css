@@ -1,0 +1,747 @@
+
+/*start global*/
+	
+	*{
+		padding: 0px;
+		margin: 0px;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -o-box-sizing: border-box;
+	    box-sizing: border-box;
+	    scroll-behavior: smooth;
+    }
+    body{
+        font-family: Verdana, Arial, Helvetica, sans-serif, Tahoma;
+    }
+ 	
+/*start global*/
+/*Start Header*/
+.header{
+	background-image: url('../images/header.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;  /*to make image look good and apropriate to the header Area , this prop. adjust image size*/
+	min-height: 500px;
+	position: relative; /*because i'll make overlay position is absolute */
+	
+
+	
+}
+
+.header .overlay{
+	position: absolute; /* to can move the overlay div and choose it's position */
+	background-color: black ; /* background-color: rgba(0,0,0,0.5);*/
+	opacity: 0.5;
+	color: white;
+	width: 100%;
+	height: 60%;
+	top: 150px;
+
+}
+
+.header .overlay h1{
+	font-size: 50px;
+}
+.header .overlay .two-plans{
+	display: grid;
+	grid-template-columns: repeat(2,500px);
+	justify-content: center;
+	gap: 10px;
+	
+}
+.header .overlay .plan{
+	
+	border: 2px solid #fff;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px;
+	
+}
+
+@media (max-width: 767px) {
+	.header .overlay .two-plans{
+		display: grid;
+		grid-template-columns: repeat(1,400px);
+		justify-content: center;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.header .overlay .two-plans{
+	display: grid;
+	grid-template-columns: repeat(2,300px);
+	justify-content: center;
+	gap: 10px;
+	
+}
+}
+/*End Header*/
+/*start nav*/
+
+nav{
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	background: #000;
+	opacity: 0.9;
+	width: 100%;
+	padding: 20px;
+}
+nav .nav-logo{
+	padding-left: 70px;
+	font-size: 30px;
+	letter-spacing: 0.1em;
+}
+
+
+nav .nav-ul li {
+	padding: 10px 50px 10px 10px;
+}
+nav .nav-ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+nav .nav-ul li:hover{
+	cursor: pointer;
+}
+
+
+/*mobile screen*/
+@media(max-width: 1200px){
+	
+	section .logo-mobile{
+		background: linear-gradient(to left,rgb(92, 75, 250),rgb(255, 7, 222));
+		background-clip: unset;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 40px;
+		position: absolute;
+		left: 20px;
+		top: 30px;
+		
+	}
+	.toggle {
+		display: visible;
+	}
+	nav{
+		display: none;
+	}
+
+
+	.toggle{
+		position: fixed;
+		top: 30px;
+		right: 30px; /*to make this menu icon (toggle div) close to the right of my page*/
+		width: 50px;
+		height: 50px;
+		background: #000 url(../images/menu3.png);
+		background-size: 30px;
+		background-position: center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		z-index: 1000; /*to make it still work because after adding another elements it doesnot work :( */
+	}
+	.toggle.active{
+		background: #000 url(../images/close.png);
+		background-size: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	nav{
+		position: fixed;
+		z-index: 100;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 100px 20px 100px 20px;
+		background-color: #000;
+		transition: 0.5s;
+		right: -100%;
+		
+	}
+	nav.active{
+		right: 0px;
+	}
+	nav .nav-logo{
+		flex-basis: 40%;
+		position: absolute;
+		left: 50px;
+		top: 15px;
+		padding-top: 30px;
+		
+	}
+	nav ul{
+		flex-basis: 60%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	nav ul li{
+		list-style: none;
+		margin: 10px 0px;
+		width: 100%;
+	}
+	nav ul li:hover{
+		background-color: #222;
+	
+	}
+	nav ul li a{
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.1em;
+		font-weight: 300;
+		letter-spacing: 2px;
+		
+	}
+}
+@media(min-width: 1200px){
+	.toggle {
+		display: none;
+	}
+	section .logo-mobile{
+		display: none;
+	}
+}
+
+
+
+/*end nav*/
+/*Start Courses*/
+
+.all-courses .course h3{
+	margin-bottom: 20px;
+	font-size: 25px;
+	color: #333;
+}
+@media(min-width: 992px){
+	.all-courses{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	justify-content: space-between;
+	gap: 15px;
+	}	
+
+}
+/*End Courses*/
+
+/*start about us*/
+/*End about us*/
+/*start our work*/
+
+/*for large screen more than 1200px(min-width: 1200px)*/
+.our-work-gallery{
+	display: grid;
+	grid-template-columns: repeat(4,25%);
+	gap: 10px;
+	padding: 0px 50px 100px; /*top right bottom*/   /*right=left so left also 50px*/
+}
+
+/*must download images in the same width and hieght like 500px x 500 px */
+.our-work-gallery .image img{
+	width: 100%;
+}
+	/*mobile and tablet*/
+	@media (max-width: 767px){
+		.our-work-gallery{
+		display: grid;
+		grid-template-columns: repeat(1,100%);
+		padding: 100px 70px 100px 50px;
+		}
+	}
+	/*small screen*/
+	@media (min-width: 768px) and (max-width: 991px){
+		.our-work-gallery{
+		display: grid;
+		grid-template-columns: repeat(2,50%);
+		padding: 100px 70px 100px 50px;
+		}
+
+	}
+	/*medium screen*/
+	@media (min-width: 992px) and (max-width: 1200px){
+		.our-work-gallery{
+		display: grid;
+		grid-template-columns: repeat(3,33.333%);
+		padding: 100px 70px 100px 50px;
+		}
+
+	}
+
+/*End work our*/
+/*start our plans*/
+.our-plans{
+	height: 750px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+.our-plans .all-plans{
+	display: flex;
+	justify-content: center;
+	height: 90%;
+}
+.our-plans .all-plans .plan-plus , .plan-Premium , .plan-Ultimate{
+	background-color: #c0c0c0;
+	margin: 10px;
+	width: 300px;
+	height: 96%;
+}
+.our-plans .all-plans .plan-plus{
+		background-color: rgb(132, 151, 248);
+	}
+.our-plans .all-plans h3{
+	color: #fff;
+	padding: 30px 0px 30px 0px;
+	font-size: 1.5em;
+	background-color: rgb(255, 205, 8);
+}
+.our-plans .all-plans .plan-plus:hover ,.plan-Premium:hover , .plan-Ultimate:hover{
+transition: 0.5;
+transform: scale(1.1);
+}
+.our-plans .all-plans h3:hover{
+	
+	background-color: rgb(62, 96, 159);
+	
+}
+
+.our-plans .all-plans .plan-plus h3:hover{
+	background-color: #000;
+}
+
+.our-plans .all-plans ul{
+	list-style: none;
+	
+}  
+.our-plans .all-plans ul li{
+	padding: 20px;
+	border-bottom: 1px solid #444;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #333;
+
+}
+.our-plans .all-plans ul li:first-of-type{
+	font-size: 30px;
+}
+.our-plans .all-plans ul li:last-of-type{
+	padding: 40px;
+	border: none;
+	
+}
+.our-plans .all-plans ul li a{
+	text-decoration: none;
+	color: #fff;
+	background-color: rgb(109, 109, 109);
+	padding: 20px 50px;
+	border-radius: 5%;
+}
+.our-plans .all-plans ul li a:hover{
+	background-color: rgb(145, 141, 141);
+}
+/*mobile screen*/
+@media(max-width: 767px){
+	.our-plans{
+		height: 2100px;
+	}
+	.our-plans .all-plans{
+	display: flex;
+	flex-direction: column;
+	}
+	.our-plans .all-plans .plan-plus , .plan-Premium , .plan-Ultimate{
+		align-self: center;           
+	}
+}
+/*small screen*/
+@media (min-width: 768px) and (max-width:991px){
+	.our-plans .all-plans .plan-plus ul li a ,.our-plans .all-plans .plan-Premium ul li a,.our-plans .all-plans .plan-Ultimate ul li a{
+		padding: 10px;
+	}
+}
+/*medium and large screen */
+@media(min-width: 992px){
+	.our-plans .all-plans .plan-plus{
+		order: 2; /*order is a child property in Flex Box */
+	}
+	.our-plans .all-plans .plan-Premium{
+		order: 1; /*order is a child property in Flex Box */
+	}
+	.our-plans .all-plans .plan-Ultimate{
+		order: 3; /*order is a child property in Flex Box */
+	}
+	
+	
+}
+
+/*End our plans*/
+
+/*start what they say about us*/
+.they-say{
+	padding: 50px 0px;
+}
+
+.they-say .person-say{
+	background-color: #EEE;
+	border: none;
+	box-shadow: 0px 2px 6px 0px #999; /*right bottom  left top*/
+	border-radius: 5%;
+	padding: 20px 0px 0px 7px;
+}
+
+.they-say .all-persons .person-say img{
+
+	border-radius: 50%;
+	padding: 1%;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.they-say .all-persons .person-say h3{
+	color: #444;
+	font-size: 1.5em;
+}
+/*mobile and small screen*/
+@media (max-width: 991px){
+	.they-say .all-persons{
+		display: grid;
+		grid-template-columns: repeat(12,1fr);
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas: ". ahmed ahmed ahmed ahmed ahmed ahmed ahmed ahmed ahmed ahmed ."
+		" . john john john john john john john john john john ."
+		" . hadeer hadeer  hadeer hadeer hadeer hadeer hadeer hadeer hadeer hadeer .";
+		gap: 15px;
+		
+		
+	}
+
+	.they-say .person-say:first-of-type{
+		grid-area: ahmed;
+	}
+	.they-say .person-say:nth-of-type(2){
+		grid-area: john;
+	}
+	.they-say .person-say:nth-of-type(3){
+		grid-area: hadeer;
+	}
+}
+/*medium screen and large screen*/
+@media (min-width: 992px){
+	.they-say .all-persons{
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-template-rows: 160px 160px;
+	grid-template-areas: ". . . ahmed ahmed ahmed ahmed ahmed ahmed . . ."
+	" john john john john john john hadeer hadeer hadeer hadeer hadeer hadeer";
+	gap: 12px;
+	}
+
+	.they-say .person-say:first-of-type{
+		grid-area: ahmed;
+	}
+	.they-say .person-say:nth-of-type(2){
+		grid-area: john;
+	}
+	.they-say .person-say:nth-of-type(3){
+		grid-area: hadeer;
+	}
+}
+.they-say .person-say{
+	display: flex;
+	gap: 2%;
+}
+.they-say .person-say img{
+	flex-basis: 19%;
+}
+.they-say .person-say .right-div{
+	flex-basis: 79%;
+	text-align: left;
+}
+/*End what they say about us*/
+/*start information*/
+	.courses-information .dynamic-tabs li{
+		padding: 15px;
+		background-color: #ddd;
+		font-size: 16px;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.courses-information .dynamic-tabs .selected{
+		color: rgb(92, 75, 250);
+		background-color: #fff;
+	}
+	
+	.courses-information .tabs-info > p{ /* > this means direct child means each p in this class .tabs-info*/
+		background-color: #fff;
+		padding: 15px;
+		line-height: 1.6;
+		
+	}
+	.courses-information .tabs-info > p:not(:first-of-type){
+		display: none;
+	}
+	/*mobile screen */
+	@media(max-width: 767px){
+		.courses-information .dynamic-tabs li{
+			display: block;
+		}
+		.courses-information .dynamic-tabs{
+			width: 100%;
+		}
+	}
+	
+/*End information*/
+/*start footer*/
+
+	footer{
+		background-color: #222;
+		color: #fff;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-bottom: 50px;
+		display: flex;
+		flex-direction: column;
+	}
+	footer .upper{
+		display: flex;
+		height: 60%;
+		text-align: left;
+	}
+	
+	footer .upper .upper-left{
+		flex-basis: 55%;
+		display: inline-flex;
+		
+	
+	}
+	footer .upper .upper-left .footer-logo ,
+	footer .upper .upper-left .footer-contact{
+		margin-right: 1%;
+		padding: 10px;
+	}
+	footer .upper .upper-left .footer-contact{
+		flex-basis: 55%;
+	}
+	footer .upper .upper-left .footer-logo{
+		flex-basis: 45%;
+	}
+	footer .upper .upper-left .footer-logo h2{
+		font-size: 27px;
+		margin-bottom: 40px;
+		padding-top: 50px;
+		letter-spacing: 0.5em;
+		background: linear-gradient(to left,rgb(92, 75, 250),rgb(255, 7, 222));
+		background-clip: unset;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		
+	}
+	footer .upper .upper-left .footer-contact h3{
+		margin-bottom: 30px;
+		padding-top: 60px;
+	}
+	footer .upper .upper-left p , footer .upper .upper-left ul li{
+		line-height: 1.6;
+		color: #999;
+		font-size: 12px;
+	}
+	footer .upper .upper-left ul li{
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	footer .upper .upper-left ul li span{
+		color: #fff;
+	}
+	footer .upper .upper-right{
+		flex-basis: 45%;
+		display: inline-flex;
+		justify-content: space-around;
+		margin-right: 100px;
+		color: #999;
+		padding-top: 70px;
+		
+	}
+	footer .upper .upper-right h3{
+		margin-bottom: 30px;
+		font-size: 16px;
+		font-weight: 600;
+		color: #fff;
+	}
+	footer .upper .upper-right ul li{
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	footer .upper .upper-right ul li:hover{
+		color: #fff;
+		cursor: pointer;
+	}
+	footer .lower{
+		margin-top: 20px;
+	
+	}
+	footer .lower .four-words{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+	footer .lower .four-words h5{
+		font-size: 14px;
+		font-weight: 600;
+		margin-right: 15px;
+	}
+	footer .lower .four-words h5:hover{
+		cursor: pointer;
+	}
+	footer .lower .copyright{
+		margin-bottom: 20px;
+		font-size: 14px;
+		color: #999;
+	}
+	footer .lower .copyright span , nav .nav-logo{
+		background: linear-gradient(to left,rgb(92, 75, 250),rgb(255, 7, 222));
+		background-clip: unset;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	footer .upper .upper-right div h3.appear-ul{
+		background-color: #000;
+		color: #fff;
+		}
+	footer .upper .upper-right div h3.appear-ul ul li{
+		background-color: #fff;
+		padding: 10px;
+	}
+	/*Mobile screen */
+	@media(max-width: 767px){
+		footer .lower .four-words h5{
+			font-size: 10px;
+			font-weight: 600;
+			margin-right: 10px;
+		}
+		footer .upper .upper-right{
+			display: flex;
+			flex-direction: column;
+		}
+		footer .upper .upper-right{
+			width: 100%;
+			height: 100%;
+			padding: 50px;
+		}
+		footer .upper .upper-right div ul{
+			display: none;
+		}
+		ul.ul-hidden{
+			display: none;
+		}
+		
+		footer .upper .upper-right div h3{
+			color: #555;
+			background-color: #eee;
+			padding: 20px;
+			text-align: center;
+			width: 200px;
+		}
+		footer .upper .upper-right div h3:hover{
+			cursor: pointer;
+			background-color: #999;
+			color: #DDD;
+		}
+	}
+	/*medium screen*/
+	@media(max-width: 991px){
+		footer .upper{
+			display: flex;
+			flex-direction: column;
+		}
+		
+	}
+
+/*End footer*/
+/*start scroll to top*/
+.up{
+	position: fixed;
+	right: -50px;
+	bottom: 50px;
+	cursor: pointer;
+	padding: 2px;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 1s;
+}
+.up.show{
+	right: 50px;
+}
+/*End scroll to top*/
+
+/* Start framework */
+
+
+
+.text-center{
+	text-align: center;
+}
+
+/*Mobile & Tablet Rules */
+@media (max-width: 767px) {
+	.responsive-paragraph{
+		text-align: center;
+		font-size: 18px !important
+		
+	}
+}
+
+/*Small Screen Rules */
+@media (min-width: 768px) {
+	.container{
+		width: 780px;
+		margin: auto;
+	}
+	
+}
+
+/*medium Screen Rules */
+@media (min-width: 992px) {
+	.container{
+		width: 1000px;
+		margin: auto;
+	}
+	
+}
+/*Large Screen Rules */
+@media (min-width: 1200px) {
+	.container{
+		width: 1100px;
+		margin: auto;
+	}
+	
+}
+.responsive-section{
+	padding: 30px 0px;
+	margin: 50px 0;
+}
+.gray-section{
+	background-color: #eee;
+}
+.responsive-h2{
+	font-size: 2em;
+	color: #555;
+	margin-bottom: 60px;
+}
+.responsive-paragraph{
+	line-height: 1.6;
+	color: #555;
+	font-size: 1.1em;
+}
+.responsive-ul{
+	list-style: none;
+	display: inline-block;
+}
+.responsive-li{
+	display: inline-block;
+}
+.uppercase-text{
+	text-transform: uppercase;
+}
+
+/* End framework */
+

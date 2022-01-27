@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web design </title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+</head>
+<body> 
+    <!--Start Header -->
+        
+        <header class="header text-center">
+            <div class="overlay">
+                <div class="container">  <!--container Must Be inside Overlay -->
+                    <h1>Choose your Track</h1>
+                    <div class="two-plans">
+                        <div class="plan">Basic Track for Begginers </div>
+                        <div class="plan">Advanced Track for Professionals</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    <!--End Header -->
+    <!-- start logo appear in mobile screen only -->
+    <section>
+        <h2 class="logo-mobile">
+            Edu Tree
+        </h2>
+    </section>
+    <!--End logo appear in mobile screen only -->
+    <!--start Nav -->
+        
+        
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <nav>
+            <div class="nav-logo">
+                Edu Tree
+            </div>
+            <ul class="nav-ul responsive-ul">
+                <li class="responsive-li"><a href="#ourourses" onclick="toggleMenu();">our courses</a></li>
+                <li class="responsive-li"><a href="#Aboutus" onclick="toggleMenu();">About us</a></li>
+                <li class="responsive-li"><a href="#Ourwork" onclick="toggleMenu();">Our Work</a></li>
+                <li class="responsive-li"><a href="#plans" onclick="toggleMenu();">plans</a></li>
+                <li class="responsive-li"><a href="#information" onclick="toggleMenu();">information</a></li>
+                <li class="responsive-li"><a href="#Contactus" onclick="toggleMenu();">Contact us</a></li>
+            </ul>
+        </nav>
+    <!--End Nav -->
+    
+    <!--Start Courses -->
+        <section class="Courses responsive-section" id="ourourses">
+            <div class="container">
+                <h2 class="text-center responsive-h2">Our Courses</h2>
+                <div class="all-courses">
+                    <div class="course">
+                        <h3 class="text-center">Basics</h3>
+                        <p class="responsive-paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim sapiente corrupti minus eveniet necessitatibus!
+                            Voluptatum eaque cum accusantium animi.
+                        </p>
+                    </div>
+                    <div class="course">
+                        <h3 class="text-center">Professionals</h3>
+                        <p class="responsive-paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim sapiente corrupti minus eveniet necessitatibus!
+                            Voluptatum eaque cum accusantium animi.
+                        </p>
+                    </div>
+                    <div class="course">
+                        <h3 class="text-center">Advanced</h3>
+                        <p class="responsive-paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim sapiente corrupti minus eveniet necessitatibus!
+                            Voluptatum eaque cum accusantium animi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--End Courses -->
+    <!--Start About us -->
+        <section class="about-us gray-section responsive-section" id="Aboutus">
+            <div class="container">
+                <h2 class="text-center responsive-h2">about us</h2>
+                <p class="responsive-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Consequatur inventore ullam, exercitationem, 
+                nisi velit quod nesciunt magni asperiores cupiditate soluta 
+                commodi cum veritatis eligendi quibusdam. 
+                Quos voluptatem laboriosam repellat neque.</p>
+            </div>
+        
+        </section>
+    
+    
+    <!--End About us  -->
+    <!--start our work  -->
+        <section class="our-work responsive-section" id="Ourwork">
+            <h2 class="text-center responsive-h2">Our Work</h2>
+            <div class="our-work-gallery">
+                <!-- must download images in the same width and hieght like 500px x 500 px -->
+                <div class="image">
+                    <img src="images/pic1.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic2.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic3.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic6.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic8.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic3.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic2.jpeg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/pic1.jpeg" alt="">
+                </div>
+            </div>
+        </section>
+    <!--End our work   -->
+    <!--start our plans   -->
+    <section class='our-plans gray-section' id="plans">
+        <div class="container">
+            <h2 class="text-center responsive-h2">Our Pricing Plans</h2>
+        <div class="all-plans">
+            <div class="plan-plus">
+                <h3 class="text-center">Plus</h3>
+                <ul>
+                    <li>$100</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Bootstrap</li>
+                    <li>Jquery</li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="plan-Premium">
+                <h3 class="text-center">Premium</h3>
+                <ul>
+                    <li>$200</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Bootstrap</li>
+                    <li>GitHUB</li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+                
+            </div>
+            <div class="plan-Ultimate">
+                <h3 class="text-center">Ultimate</h3>
+                <ul>
+                    <li>$300</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Bootstrap</li>
+                    <li>React</li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--End our plans   -->
+    <!--Start testimonials   -->
+    <section class="they-say responsive-section">
+        <div class="container">
+            <h2 class="text-center responsive-h2">What they say about us</h2>
+            <div class="all-persons">
+                <div class="person-say">
+                    <img src="images/ahmed.png" alt="person photo" width="100px" height="100px">
+                    <div class="right-div">
+                         <h3>Ahmed</h3>
+                        <p class="responsive-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        , eius aspernatur molestias blanditiis magnam. 
+                        </p>
+                    </div>
+                </div>
+                <div class="person-say">
+                    <img src="images/john.png" alt="person photo" width="100px" height="100px">
+                    <div class="right-div">
+                        <h3>john</h3>
+                        <p class="responsive-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        , eius aspernatur molestias blanditiis magnam. 
+                        </p>
+                    </div>
+                </div>
+                 <div class="person-say">
+                    <img src="images/hadeer.jpg" alt="person photo" width="100px" height="100px">
+                    <div class="right-div">
+                        <h3>hadeer</h3>
+                        <p class="responsive-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        , eius aspernatur molestias blanditiis magnam. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End testimonials    -->
+    <!--start information -->
+        <section class="courses-information gray-section responsive-section" id="information">
+            <div class="container">
+                <h2 class="text-center responsive-h2">Courses Information</h2>
+                <ul class="responsive-ul dynamic-tabs">
+                    <li data-class="programming" class="responsive-li selected">Programming</li>
+                    <li data-class="mathematics" class="responsive-li">Mathematics</li>
+                    <li data-class="languages" class="responsive-li">Languages</li>
+                    <li data-class="e-learning" class="responsive-li">E-learning</li>
+                    <li data-class="machine-learning" class="responsive-li">Machine Learning</li>
+                </ul>
+                <div class="tabs-info">
+                    <p class="programming"> Programming dolor sit amet, consectetur adipisicing elit. 
+                        Numquam ipsam enim quod sequi dicta pariatur nihil,
+                        nobis rem commodi, quia cumque asperiores quas vero 
+                        saepe illo voluptates sit iusto delectus.
+                    </p>
+                    <p class="mathematics"> Mathematics ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Numquam ipsam enim quod sequi dicta pariatur nihil,
+                        nobis rem commodi, quia cumque asperiores quas vero 
+                        saepe illo voluptates sit iusto delectus.
+                    </p>
+                    <p class="languages">Languages ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Numquam ipsam enim quod sequi dicta pariatur nihil,
+                        nobis rem commodi, quia cumque asperiores quas vero 
+                        saepe illo voluptates sit iusto delectus.
+                    </p>
+                    <p class="e-learning"> E-learning ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Numquam ipsam enim quod sequi dicta pariatur nihil,
+                        nobis rem commodi, quia cumque asperiores quas vero 
+                        saepe illo voluptates sit iusto delectus.
+                    </p>
+                    <p class="machine-learning"> Machine-learning ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Numquam ipsam enim quod sequi dicta pariatur nihil,
+                        nobis rem commodi, quia cumque asperiores quas vero 
+                        saepe illo voluptates sit iusto delectus.
+                    </p>
+                </div>
+            </div>
+        </section>
+    <!--End information  -->
+    <!--start foooter  -->
+        <footer class="text-center" id="Contactus">
+            <div class="upper">
+                <div class="upper-left"> 
+                    <div class="footer-logo">
+                        <h2>Edu Tree</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, 
+                            consectetuer adipiscing elit. Donec odio.
+                            Quisque volutpat mattis eros.
+                            Nullam malesuada erat ut turpis.
+                            Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede ..
+                        </p>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <ul class="responsive-ul">
+                            <li><span>Address: </span> 123 Fake Street, New York</li>
+                            <li><span>Phone:</span> (08) 8827 633354</li>
+                            <li><span>Fax:</span> (08) 8827 633354</li>
+                            <li><span>Mail:</span> contact@yoursite.com</li>
+                            <li><span>Openning:</span> 8:00 - 19:00, Mon - Sat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="upper-right">
+                    <div class="information">
+                        <h3  data-class="info" class="lower-h3 uppercase-text">Information</h3>
+                        <ul class="info lower-ul responsive-ul">
+                            <li>About us</li>
+                            <li>Legal Notice</li>
+                            <li>Addresses</li>
+                            <li>Order</li>
+                            <li>Payment</li>
+                            <li>Suppliers</li>
+                        </ul>
+                    </div>
+                    <div class="my Account">
+                        <h3 data-class="my-acc" class="lower-h3 uppercase-text">My Account</h3>
+                        <ul class="my-acc lower-ul responsive-ul">
+                            <li>Delivery</li>
+                            <li>Legal Notice</li>
+                            <li>About us</li>
+                            <li>New products</li>
+                            <li>Best sales</li>
+                            <li>prices drop</li>
+                        </ul>
+                    </div>
+                    <div class="company">
+                        <h3 data-class="comp" class="lower-h3 uppercase-text">Company</h3>
+                        <ul class="comp lower-ul responsive-ul">
+                            <li>My account</li>
+                            <li>My Cart</li>
+                            <li>Identity</li>
+                            <li>Order</li>
+                            <li>Contact us</li>
+                            <li>Addresses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="lower">
+                <div class="four-words uppercase-text">
+                    <h5 class="col1">Returns</h5>
+                    <h5 class="col2">Orders History</h5>
+                    <h5 class="col3">Site Map</h5>
+                    <h5 class="col4">Testimonial</h5>
+                </div>
+                <div class="copyright">Copyright © 2021 <span>EduTree Academy</span>. All Rights Reserved. </div>
+                <div class="payment-ways">
+                    <img src="/images/images (34).png" alt="paypal" width="50px" height="30px">
+                    <img src="/images/images (35).png" alt="Mastercard" width="50px" height="30px">
+                    <img src="/images/images (49).jpeg" alt="visa" width="50px" height="30px">
+                    <img src="/images/images (50).jpeg" alt="discover" width="50px" height="30px">
+                </div>
+            </div>
+        </footer>
+    <!--End footer  -->
+    
+    <!--start scroll to top Button-->
+        <button class="up">UP</button>
+    <!--End scroll to top Button-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/custom.js"></script>
+	<script>
+			function toggleMenu(){
+				const menuToggle = document.querySelector('.toggle');
+				menuToggle.classList.toggle('active');
+				const navBar = document.querySelector('nav');
+				navBar.classList.toggle('active');
+			}
+    </script>
+</body>
+</html>
